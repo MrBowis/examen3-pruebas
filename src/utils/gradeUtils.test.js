@@ -3,7 +3,7 @@ import { calcWeightedGrade, percentile } from './gradeUtils.js';
 describe('calcWeightedGrade', () => {
     test('Caso de referencia: 80*0.4 + 90*0.6 = 86.00', () => {
         const result = calcWeightedGrade([{score: 80, weight: 0.4}, {score: 90, weight: 0.6}]);
-        expect(result).toBe(85.00);
+        expect(result).toBe(86.00);
     });
 
     test('Peso único (100%)', () => {

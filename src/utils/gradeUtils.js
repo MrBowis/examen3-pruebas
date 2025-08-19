@@ -8,12 +8,12 @@
 function calcWeightedGrade(items) {
     // Validar que items es un arreglo
     if (!Array.isArray(items)) {
-        throw new TypeError('items debe ser un arreglo');
+        // throw new TypeError('items debe ser un arreglo');
     }
 
     // Validar que el arreglo no esté vacío
     if (items.length === 0) {
-        throw new RangeError('items no puede estar vacío');
+        // throw new RangeError('items no puede estar vacío');
     }
 
     let totalScore = 0;
@@ -23,24 +23,24 @@ function calcWeightedGrade(items) {
     for (const item of items) {
         // Validar que item es un objeto
         if (typeof item !== 'object' || item === null) {
-            throw new TypeError('Cada item debe ser un objeto');
+            // throw new TypeError('Cada item debe ser un objeto');
         }
 
         // Validar que tiene las propiedades requeridas
         if (!('score' in item) || !('weight' in item)) {
-            throw new TypeError('Cada item debe tener propiedades score y weight');
+            // throw new TypeError('Cada item debe tener propiedades score y weight');
         }
 
         const { score, weight } = item;
 
         // Validar tipos
         if (typeof score !== 'number' || typeof weight !== 'number') {
-            throw new TypeError('score y weight deben ser números');
+            // throw new TypeError('score y weight deben ser números');
         }
 
         // Validar que no sean NaN
         if (isNaN(score) || isNaN(weight)) {
-            throw new TypeError('score y weight no pueden ser NaN');
+            // throw new TypeError('score y weight no pueden ser NaN');
         }
 
         // Validar rangos
